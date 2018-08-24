@@ -35,12 +35,7 @@ class WENInstagramAPI {
 	 * @return array|string|WP_Error
 	 */
 	public function get_user_own_media( $max_id = '' ) {
-		$url         = 'https://api.instagram.com/v1/users/self/media/recent/';
-
-
-		if ( $max_id != '' ) {
-			$max_id = '&max_id' . $max_id;
-		}
+		$url = 'https://api.instagram.com/v1/users/self/media/recent/';
 
 		$args        = array(
 			'access_token' => $this->access_token,
