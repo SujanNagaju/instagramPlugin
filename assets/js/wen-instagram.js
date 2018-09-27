@@ -2,7 +2,7 @@ jQuery(function ($) {
     $grid = '';
 
     $(window).on('load', function () {
-        $grid = $('.grid').masonry({
+        $grid = $('.wen-instagram-grid').masonry({
             // options
             itemSelector: '.grid-item',
             columnWidth: 10
