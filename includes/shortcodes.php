@@ -7,7 +7,7 @@ function wen_insta_feed_list() {
 
 	$images = $response['data'];
 
-
+    //print_pre($response);
 	?>
     <div  class="wen-instagram-grid">
 		<?php
@@ -17,6 +17,9 @@ function wen_insta_feed_list() {
 				array( 'image_url' => $image_url ) );
 		}
 		?>
+    </div>
+    <div>
+        <button class="load-more-photos" data-next="<?php echo $response->next_max_id; ?>">Load More...</button>
     </div>
 	<?php
 	$content = ob_get_clean();

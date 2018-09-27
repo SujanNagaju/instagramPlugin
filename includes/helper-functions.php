@@ -11,7 +11,7 @@ function wen_get_more_photos() {
 	// returns data & pagination info
 	if ( ! is_wp_error( $response ) ) {
 		foreach ( $response['data'] as $data ) {
-			$image_url = $data['images']['low_resolution']['url'];
+			$image_url = $data['images']['thumbnail']['url'];
 			wen_get_template_part( 'template-parts/insta-items.php',
 				array( 'image_url' => $image_url ) );
 		}
